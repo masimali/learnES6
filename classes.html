@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //=================Classes=================//
+    class Human {
+        constructor() {
+            this.gender = 'Male';
+        }
+        defineGender = (gender) => {
+            this.gender = gender;
+        }
+
+    }
+    class Person extends Human {
+        constructor(props) {
+            super(props);
+            this.name = 'Max'
+        }
+
+        showPerson = () => {
+
+            console.log(this.name);
+            console.log(this.gender);
+        }
+    }
+
+    const personA = new Person()
+    console.log(personA.gender);
+    personA.defineGender('Female');
+    personA.showPerson();
+</script>
+</html>

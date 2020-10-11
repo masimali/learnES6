@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //=================Arrow Function=================//
+    //old way of declaring function
+    function addValues(arg1,arg2){
+        return arg1 + arg2;
+    }
+    var res1 = addValues(5,7);
+    console.log(res1);
+    //New way using arrow notation---------
+    addNums = (num1,num2) => {
+        return num1 + num2;
+    }
+    let res2 = addNums(10,20);
+    console.log(res2);
+    //with brackets ---------
+    showNum = (number) => {return number}
+    console.log(showNum(50));
+    //without brackets ---------
+    displayNumber = num => num*4;
+    console.log(displayNumber(5));
+</script>
+</body>
+</html>

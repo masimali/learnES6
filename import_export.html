@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //================= Import/Export =================//
+    //2 ways to define to export
+    //first way (default export)
+    const path = "www.youtube.com";
+    export default path;
+
+    //because its a default export so name could be same or different
+    import path from "../../filename"
+
+    //second way (named export)
+    export const path = "www.youtube.com";
+    import { path } from "../../filename"
+
+    //alias
+    import { path as youtubepath  } from "../../filename"
+
+    // use of * sign to get all
+    export const pathOne = "www.youtube.com";
+    export const pathTwo = "www.facebook.com";
+
+    import * as bundled from "../../filename"
+</script>
+</body>
+</html>
