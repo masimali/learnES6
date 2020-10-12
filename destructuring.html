@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //=================Destructuring=================//
+    const person = {
+        "firstName":"John",
+        "lastName":"Doe",
+        "Age":25,
+        "Gender":"Male",
+        "email":"email@email.com"
+    }
+    // typical way
+    console.log(person.firstName);
+    console.log(person.email);
+
+    const {firstName,email} = person;  // getting not all but some properties from the object
+
+    // destructuring way
+    console.log(firstName);
+    console.log(email);
+
+    // using in function to pass some properties of object
+    getObjectProperties = ({firstName,lastName}) => {
+        return firstName+" "+lastName;
+    }
+    let firstNameLastName = getObjectProperties(person);
+    console.log(firstNameLastName);
+
+</script>
+</body>
+</html>

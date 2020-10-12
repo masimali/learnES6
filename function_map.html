@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //Note: map function iterate through an array and make a new array
+    //
+    let numbers = [1,2,3,4,5];
+    let doubleNumbers = [];
+
+    // Typical way
+    for(let i = 0; i < numbers.length; i++){
+        doubleNumbers.push(numbers[i]*2);
+    }
+    console.log(doubleNumbers);
+
+    // ES6 way
+    doubleNumbers = numbers.map(function (number) {
+        return number * 2;
+    });
+    console.log(doubleNumbers);
+
+    //Example
+    let cars = [
+        {Model:"Honda Civic",price:"cheap"},
+        {Model:"Toyota Land Cruiser",price:"Expensive"},
+        {Model:"Suzuki Alto",price:"Very Cheap"}
+    ];
+
+    let carModels = cars.map(function (car) {
+        return car.Model;
+    });
+    console.log(carModels);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //===================Map,Filter,Foreach,Reduce,Find,Every,Some=================//
+    arr_colors = ['Red', 'Green', 'Blue'];
+
+    //traditional
+    for (let i =0; i< arr_colors.length; i++){
+        console.log(arr_colors[i]);
+    }
+    //with ES6 Helper function
+    arr_colors.forEach(function (color) {
+        console.log(color)
+    });
+    //Example-------------------------
+    let numbers = [1,2,3,4,5];
+    let sum  = 0;
+    numbers.forEach(function (number) {
+        sum += number;
+    })
+    console.log("The Sum is :", sum);
+    //Example2------------------------
+    let arr_numbers = [11,22,33,44,55];
+    let total = 0;
+    arr_numbers.forEach(addNumbers); // Note: only function name means just run the function not return value
+    function addNumbers(num) {
+        total += num;
+    }
+    console.log("Array Total :", total);
+
+</script>
+</body>
+</html>

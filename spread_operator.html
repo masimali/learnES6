@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //=================Spread Operator=================//
+    let arrayOne = [1,2,3,4,5]; // array one
+    let arrayTwo = [6,7,8,9,10,11,12]; // array two
+
+    let newArray = arrayOne.concat(arrayTwo); // one way to combine two arrays
+    console.log("new Array: ", newArray);
+
+    //using spread operator
+    anotherNewArray1 = [...arrayOne,...arrayTwo];  // this will combine the two arrays
+    console.log("another new Array1: ", anotherNewArray1);
+
+    anotherNewArray2 = [...anotherNewArray1, 13,14,15];
+    console.log("another new Array2: ", anotherNewArray2)
+
+
+
+
+
+
+</script>
+</body>
+</html>
