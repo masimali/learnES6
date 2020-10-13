@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let users = [
+        {name:"Asim"},
+        {name:"Hakim"},
+        {name:"Ali"}
+    ];
+    //typical way
+    let user;
+    for (let i = 0; i < users.length; i++)
+    {
+        if(users[i].name === 'Hakim'){
+            user = users[i].name;
+        }
+    }
+    console.log(user)
+
+    // ES6 Way
+    let userFound = '';
+    userFound = users.find(function (user) {
+        return user.name === 'Hakim';
+    })
+   console.log(userFound);
+</script>
+</body>
+</html>
