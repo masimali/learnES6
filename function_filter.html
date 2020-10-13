@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+let products = [
+    {name: "Banana", type:"fruits", quantity: 0, price:1},
+    {name: "Cucumber", type:"vegetable", quantity: 10,price: 8},
+    {name: "Potato", type:"vegetable", quantity: 30, price: 13},
+    {name: "Orange", type:"fruits", quantity: 3, price: 5}
+];
+
+    //typical way
+    let newProductArray = [];
+    for(let i = 0; i < products.length; i++)
+    {
+        if(products[i].type === 'fruits'){
+            newProductArray.push(products[i]);
+        }
+    }
+    console.log(newProductArray);
+
+    //ES6 way
+    let arr_fruits = products.filter(function (product) {
+        return product.type === 'vegetable'
+    });
+    console.log(arr_fruits);
+
+    //Example -- get the product of type vegetable and price is greater than 0 and less than 10
+    let filteredProducts = products.filter(function (product) {
+        return product.type === 'vegetable' && product.price > 0 && product.price < 10;
+    });
+    console.log(filteredProducts);
+
+    // Example 2 filter comments base on the post id
+    let posts = {id:4,title:"This is new post"};
+    let comments = [
+        {postId:4,content:"Awesome post"},
+        {postId:3,content:"nice post bro"},
+        {postId:4,content:"ok and neat"},
+    ];
+
+    function getComment(posts,comments) {
+        return comments.filter(function (comment) {
+            return comment.postId === posts.id
+        });
+    }
+
+    let filteredComments = getComment(posts,comments);
+    console.log(filteredComments);
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
