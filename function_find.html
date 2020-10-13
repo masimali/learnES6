@@ -20,14 +20,31 @@
             user = users[i].name;
         }
     }
-    console.log(user)
+    console.log(user) // return name
 
     // ES6 Way
     let userFound = '';
     userFound = users.find(function (user) {
         return user.name === 'Hakim';
     })
-   console.log(userFound);
+   console.log(userFound); // return object
+
+    //Example
+    let posts =[
+        {id:1,title:"New Post"},
+        {id:2,title:"Old Post"}
+    ];
+
+    let comments = {postId: 1, comment:"Awesome post"};
+
+    function postForComment(posts, comments){
+        return posts.find(function (post) {
+            return post.id === comments.postId;
+        });
+    }
+    let dataFound = postForComment(posts, comments);
+    console.log(dataFound);
+
 </script>
 </body>
 </html>
